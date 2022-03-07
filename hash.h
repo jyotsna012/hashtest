@@ -8,7 +8,8 @@ using namespace std;
 class hashmap{
 public:
   private:
-    static const int tableSize = 100;
+    //static const int tableSize = 100;
+    int tableSize = 100;
     struct Student {
       char firstName[20];
       char lastName[20];
@@ -24,7 +25,8 @@ public:
     void addStudent(char* firstName, char* lastName, int studentId, float GPA);
     int numItemsIndex(int index);
     void print();
-    Student* HashTable[tableSize];
+    //Student* HashTable[tableSize];
+    Student *HashTable = new Student[tableSize];
 
 };
 
