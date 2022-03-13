@@ -76,18 +76,18 @@ while(true){
 		while(getline(myFile, line)){
 			first[i] = line;
 			cout << line << endl;
-			i++
+			i++;
 		}
 		myFile.close();
 	    }
 	    
-       fstream myFile;
-	    myFile.open("lastNames.txt", ios::in);
-	    if(myFile.is_open()){
+       fstream myFile2;
+	    myFile2.open("lastNames.txt", ios::in);
+	    if(myFile2.is_open()){
 	    	string line;
-		while(getline(myFile, line)){
+		while(getline(myFile2, line)){
 			first[a] = line;
-			a++
+			a++;
 			cout << line << endl;
 		}
 		myFile.close();
