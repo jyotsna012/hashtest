@@ -61,17 +61,17 @@ while(true){
       int num;
       cin >> num;
       cin.get();
+	  
 	    
-      fstream myFile;
-      myFile.open("firstNames.txt", ios::in);
-      if(myFile.is_open()){
-      	char line[30];
-	while(cin.getline(line, 30)){
-		cout << line << endl;
-	}
-	myFile.close();
-      }
-	   
+      ifstream a("B-small-practice.in",ios::in);
+      int b,i=0;
+      a>>b;
+      char c[b][128];
+      while(i < b && a.getline(c[i],128))
+      {
+    	cout<<c[i];
+    	i++;
+      }    
     }
   }
   return 0;  	
