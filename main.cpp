@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <cstring>
+#include <fstream>
 
 #include "hash.h"
 
@@ -60,6 +61,16 @@ while(true){
       int num;
       cin >> num;
       cin.get();
+	    
+      fstream myFile;
+      myFile.open("firstNames.txt", ios::in);
+      if(myFile.is_open()){
+      	char line[30];
+	while(getline(myFile, line)){
+		cout << line << endl;
+	}
+	myFile.close();
+      }
 	   
     }
   }
