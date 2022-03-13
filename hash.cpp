@@ -161,9 +161,9 @@ int hashmap::Hash(char* key){
 
 void hashmap::removeItem(int sID){
   int index = Hash(findName(sID));
-  item* delPtr;
-  item* P1;
-  item* P2;
+  Student* delPtr;
+  Student* P1;
+  Student* P2;
 
 
 }
@@ -172,7 +172,7 @@ char* hashmap::findName(int sID){
   bool foundID = false;
   char fName[20];  
   
-  item* Ptr = HashTable[index];
+  Student* Ptr = HashTable[index];
   while(Ptr != NULL){
     if(Ptr->studentId == sID){
       foundID = true;
