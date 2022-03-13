@@ -172,7 +172,7 @@ void hashmap::removeItem(char* fName){
     cout << "name was not found in HashTable" << endl;
   }
 
-  else if(strcmp(HashTable[index] -> firstName,fName) == 0 fName && HashTable[index]->next == NULL){
+  else if(strcmp(HashTable[index] -> firstName,fName) == 0 && HashTable[index]->next == NULL){
         cout << "in one2" << endl;
 
     strcpy(HashTable[index]->firstName, "empty");  
