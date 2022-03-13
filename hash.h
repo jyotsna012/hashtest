@@ -10,7 +10,8 @@ public:
   private:
     void setA();
     int a;
-    static const int tableSize = a;
+    void setTableSize();
+    static const int tableSize;
     //int tableSize = 100;
     struct Student {
       char firstName[20];
