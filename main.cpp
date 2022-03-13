@@ -63,13 +63,31 @@ while(true){
       int num;
       cin >> num;
       cin.get();   
+      
+      string first[35];
+      string last[35];
+      int i = 0;
+      int a = 0;
 	    
       fstream myFile;
 	    myFile.open("firstNames.txt", ios::in);
 	    if(myFile.is_open()){
 	    	string line;
 		while(getline(myFile, line)){
-			
+			first[i] = line;
+			cout << line << endl;
+			i++
+		}
+		myFile.close();
+	    }
+	    
+       fstream myFile;
+	    myFile.open("lastNames.txt", ios::in);
+	    if(myFile.is_open()){
+	    	string line;
+		while(getline(myFile, line)){
+			first[a] = line;
+			a++
 			cout << line << endl;
 		}
 		myFile.close();
