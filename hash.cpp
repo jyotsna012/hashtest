@@ -76,6 +76,16 @@ void hashmap::print(){
   int number;
   for(int i = 0; i < tableSize; i++){
     number = numItemsIndex(i);
+    if(number == 0){
+    cout << "-----------------" << endl;
+    cout << "index = " << i << endl;
+    cout << HashTable[i]->firstName<< endl;  
+    cout << HashTable[i]->lastName<< endl;  
+    cout << HashTable[i]->studentId<< endl;
+    cout << HashTable[i]->GPA<< endl;
+    cout << "number of items = " << number << endl;
+    cout << "-----------------" << endl;  
+    }
     if(number == 1){
     cout << "-----------------" << endl;
     cout << "index = " << i << endl;
