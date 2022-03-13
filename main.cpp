@@ -7,7 +7,9 @@
 using namespace std;
 
 int main(){
-  
+     int tablesize;
+    tablesize = 100;
+    hashmap Hashy(tablesize);
  cout << "Welcome to the Student List." << endl;
  cout << "You can ADD, PRINT, DELETE, or QUIT" << endl;
  cout << "ADD -> Creates a new entry for student" << endl;
@@ -28,9 +30,7 @@ int main(){
    //add students
   if(choice == 0){
     cout << "--------------------HASHY 1----------------------------" << endl;
-    int tablesize;
-    tablesize = 100;
-    hashmap Hashy(tablesize);
+
     Hashy.addStudent("Paul", "Locha", 1, 1.11);
     Hashy.addStudent("Kim", "Iced Mocha", 2, 2.22);
     Hashy.addStudent("Emma", "Strawberry Smoothie", 3, 3.33);
