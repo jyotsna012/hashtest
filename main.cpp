@@ -66,7 +66,7 @@ while(true){
       myFile.open("firstNames.txt", ios::in);
       if(myFile.is_open()){
       	char line[30];
-	while(getline(myFile, line)){
+	while(cin.getline(line, 30)){
 		cout << line << endl;
 	}
 	myFile.close();
