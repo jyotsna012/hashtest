@@ -61,6 +61,15 @@ while(true){
       int num;
       cin >> num;
       cin.get();   
+	    
+      const int size = 20;
+      char correctAnswers[size];
+      ifstream correctAnswersFile;
+      correctAnswersFile.open("firstNames.txt");
+      for (int i = 0; i < size; i++) {
+      correctAnswersFile >> correctAnswers[i];
+      cout << correctAnswers[i] << endl;
+}
     }
   }
   return 0;  	
