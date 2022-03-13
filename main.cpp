@@ -62,7 +62,7 @@ while(true){
       cin >> num;
       cin.get();   
 	    
-      const int size = 218;
+      const int size = 220;
       char correctAnswers[size];
       ifstream correctAnswersFile;
       correctAnswersFile.open("firstNames.txt");
