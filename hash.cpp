@@ -76,7 +76,7 @@ void hashmap::print(){
   int number;
   for(int i = 0; i < tableSize; i++){
     number = numItemsIndex(i);
-    if(number = 1){
+    if(number == 1){
     cout << "-----------------" << endl;
     cout << "index = " << i << endl;
     cout << HashTable[i]->firstName<< endl;  
@@ -86,7 +86,7 @@ void hashmap::print(){
     cout << "number of items = " << number << endl;
     cout << "-----------------" << endl;  
     }
-    if(number = 2){
+    if(number == 2){
     cout << "-----------------" << endl;
     cout << "index = " << i << endl;
     cout << HashTable[i]->firstName<< endl;  
@@ -104,7 +104,7 @@ void hashmap::print(){
     cout << "number of items = " << number << endl;
     cout << "-----------------" << endl;  
     }
-    if(number = 3){
+    if(number == 3){
     cout << "-----------------" << endl;
     cout << "index = " << i << endl;
     cout << HashTable[i]->firstName<< endl;  
