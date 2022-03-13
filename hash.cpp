@@ -192,7 +192,7 @@ void hashmap::removeItem(char* fName){
     P1 = HashTable[index]->next;
     P2 = HashTable[index];
     
-    while(P1 != NULL && P1->firstName != fname){
+    while(P1 != NULL && P1->firstName != fName){
       P2 = P1;
       P1 = P1->next;
     }
