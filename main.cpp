@@ -32,7 +32,7 @@ int main(){
 	    if(myFile2.is_open()){
 	    	string line;
 		while(getline(myFile2, line)){
-			first[a] = line;
+			last[a] = line;
 			a++;
 		//	cout << line << endl;
 		}
