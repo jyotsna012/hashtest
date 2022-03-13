@@ -94,6 +94,8 @@ while(true){
  	
       for(int z =0; z < num; z++){
       	cout << first[z] <<endl;
+	            	cout << last[z] <<endl;
+
       
       }
       
