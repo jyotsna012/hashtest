@@ -9,7 +9,6 @@ using namespace std;
 hashmap::hashmap(int ntableSize){
   char emptys[] = "empty";
   for(int i = 0; i < tableSize; i++){
-    struct Book *pbook = new book;
     HashTable[i] = new Student;
     strcpy(HashTable[i]->firstName, emptys);  
     strcpy(HashTable[i]->lastName, emptys);  
