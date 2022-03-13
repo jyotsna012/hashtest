@@ -26,6 +26,7 @@ public:
     int numItemsIndex(int index);
     void print();
     Student* HashTable[tableSize];
+    void removeItem(int sID);
     //Student *HashTable = new Student[tableSize];
 
 };
