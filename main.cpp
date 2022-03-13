@@ -60,18 +60,7 @@ while(true){
       cout << "how many students would you like to add?" << endl;
       int num;
       cin >> num;
-      cin.get();
-	  
-	    
-      ifstream a("B-small-practice.in",ios::in);
-      int b,i=0;
-      a>>b;
-      char c[b][128];
-      while(i < b && a.getline(c[i],128))
-      {
-    	cout<<c[i];
-    	i++;
-      }    
+      cin.get();   
     }
   }
   return 0;  	
