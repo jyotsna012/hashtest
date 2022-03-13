@@ -41,11 +41,16 @@ while(true){
 	Hashy.print();
 
     }
-    //deletes an item based on ID	
+    //deletes an item based on name	
     if(input == 3){
+	cout << "Please enter the student's first name that you would like to delete" << endl;    
+	char fName[20];
+        cin.get(fName,20);
+  	cin.get();
+	Hashy.removeItem(fName);
     }
     //exits function
-    if(input == 5){
+    if(input == 4){
       break;
     }
   }
