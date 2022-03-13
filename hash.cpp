@@ -159,15 +159,57 @@ int hashmap::Hash(char* key){
   
 }
 
-void hashmap::removeItem(int sID){
-  int index = Hash(findName(sID));
+void hashmap::removeItem(char* fName){
+  int index = Hash(fName);
   Student* delPtr;
   Student* P1;
   Student* P2;
 
-
+  if(HashTable[index]->firstName == "empty" && HashTable[index]->lastName == "empty"){
+    cout << "name was not found in HashTable" << endl;
+  }
+  
+  else if(HashTable[index] -> firstName == fName && HashTable[index]->next == NULL){
+    strcpy(HashTable[i]->firstName, emptys);  
+    strcpy(HashTable[i]->lastName, emptys);  
+    HashTable[i]->studentId = 0;
+    HashTable[i]->GPA = 0.00;
+    HashTable[i]->next = NULL;
+    
+    cout << "deleted" << endl;
+  }
+  
+  else if(HashTable[index] -> firstName == fName){
+  
+    delPtr = Hashtable[index];
+    HashTable[index] = HashTable[index]->next;
+    delete delPtr;
+    
+    cout << "deleted" << endl;
+  }
+  
+  else{
+    P1 = HashTable[index]->next;
+    P2 = HashTable[index];
+    
+    while(P1 != NULL && P1->fName != name){
+      P2 = P1;
+      P1 = P1->next;
+    }
+    if(P1 == NULL){
+       cout << "name was not found in HashTable" << endl;
+    }else{
+      delPtr = P1;
+      P1 = P1 -> next;
+      P2 -> next = P1;
+      
+      delete delPtr;
+      cout << "deleted" << endl;
+    }
+  }
 }
-char* hashmap::findName(int sID){
+
+/*char* hashmap::findName(int sID){
   int index = Hash(fname);
   bool foundID = false;
   char fName[20];  
@@ -184,5 +226,5 @@ char* hashmap::findName(int sID){
   if(foundID == true){
     return fName;
   }
-}
+}*/
 
