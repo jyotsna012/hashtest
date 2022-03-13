@@ -164,6 +164,7 @@ void hashmap::removeItem(char* fName){
   Student* delPtr;
   Student* P1;
   Student* P2;
+  cout << fName << endl;
 
   if(HashTable[index]->firstName == "empty" && HashTable[index]->lastName == "empty"){
     cout << "name was not found in HashTable" << endl;
