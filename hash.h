@@ -27,6 +27,7 @@ public:
     void print();
     Student* HashTable[tableSize];
     void removeItem(int sID);
+    char* findName(int sID);
     //Student *HashTable = new Student[tableSize];
 
 };
