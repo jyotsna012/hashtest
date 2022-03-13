@@ -29,25 +29,28 @@ int main(){
   cin >> choice;
    //add students
   if(choice == 0){
-    cout << "--------------------HASHY 1----------------------------" << endl;
-
-    Hashy.addStudent("Paul", "Locha", 1, 1.11);
-    Hashy.addStudent("Kim", "Iced Mocha", 2, 2.22);
-    Hashy.addStudent("Emma", "Strawberry Smoothie", 3, 3.33);
-    Hashy.addStudent("Annie", "Hot Chocolate", 4, 4.44);
-    Hashy.addStudent("Sarah", "Passion Tea", 5, 5.55);
-    Hashy.addStudent("Pepper", "Caramel Mocha", 6, 6.66);
-    Hashy.addStudent("Mike", "Chai Tea", 7, 7.77);
-    Hashy.addStudent("Steve", "Apple Cider", 8, 8.88);
-    Hashy.addStudent("Bill", "Root Beer", 9, 9.99);
-    Hashy.addStudent("Marie", "Skinny Latte", 11, 1.123);
-    Hashy.addStudent("Susan", "Water", 12, 2.123);
-    Hashy.addStudent("Joe", "Green Tea", 13, 3.123); 
-    Hashy.print();
-    cout << "--------------------HASHY 2----------------------------" << endl; 
+    cout << "What is the first name of the student" << endl;
+          char fN[20];
+  		cin.get(fN,20);
+  		cin.get();
+    cout << "What is the last name of the student" << endl;
+          char lN[20];
+  		cin.get(lN,20);
+  		cin.get();
+    cout << "What is the Student ID" << endl;
+         	int sI;
+  		cin >> sI;
+  		cin.get();
+    cout << "What is the students GPA" << endl;
+          float G;
+ 		cin >> G;
+	  	cin.get();
+   
+    Hashy.addStudent(fN, lN, sI, G);
   }
    //prints vector
   if(choice == 1){  
+     Hashy.print();
   }
    //delete student
   if(choice == 2){  
@@ -81,3 +84,16 @@ for(int i =0; i < oldtablesize; i++){
 }
    HashyTwo.print();
 }*/
+
+    /*Hashy.addStudent("Paul", "Locha", 1, 1.11);
+    Hashy.addStudent("Kim", "Iced Mocha", 2, 2.22);
+    Hashy.addStudent("Emma", "Strawberry Smoothie", 3, 3.33);
+    Hashy.addStudent("Annie", "Hot Chocolate", 4, 4.44);
+    Hashy.addStudent("Sarah", "Passion Tea", 5, 5.55);
+    Hashy.addStudent("Pepper", "Caramel Mocha", 6, 6.66);
+    Hashy.addStudent("Mike", "Chai Tea", 7, 7.77);
+    Hashy.addStudent("Steve", "Apple Cider", 8, 8.88);
+    Hashy.addStudent("Bill", "Root Beer", 9, 9.99);
+    Hashy.addStudent("Marie", "Skinny Latte", 11, 1.123);
+    Hashy.addStudent("Susan", "Water", 12, 2.123);
+    Hashy.addStudent("Joe", "Green Tea", 13, 3.123);*/
