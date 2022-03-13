@@ -5,65 +5,53 @@
 #include "hash.h"
 
 using namespace std;
-
+  
 int main(){
-     int tablesize;
+//will keep running until user quits
+    int tablesize;
     tablesize = 100;
     hashmap Hashy(tablesize);
- cout << "Welcome to the Student List." << endl;
- cout << "You can ADD, PRINT, DELETE, or QUIT" << endl;
- cout << "ADD -> Creates a new entry for student" << endl;
- cout << "PRINT -> Prints the current students stored" << endl;
- cout << "DELETE -> Deletes entry based on student ID" << endl;
- cout << "QUIT -> Exits the program" << endl;
- int loop = 0;
- //program keeps running until user quits
- while(loop == 0){
-  cout << "What would you like to do?" << endl;
-  cout << "Enter the action you would like to do by entering the coressponding number." << endl;
-  cout << "ADD = 0" << endl;
-  cout << "PRINT = 1" << endl;
-  cout << "DELETE = 2" << endl;
-  cout << "QUIT = 3" << endl;
-  int choice;
-  cin >> choice;
-   //add students
-  if(choice == 0){
-    cout << "What is the first name of the student" << endl;
-          char fN[20];
+while(true){
+    int input;
+    cout << "Type 1 for add, 2 for print, 3 for delete, or 4 for quit" << endl;
+    cin >> input;
+    cin.get();
+     //asks user for details of student 
+    if(input == 1){
+		cout << "Please enter the student's first name" << endl;
+  		char fN[20];
   		cin.get(fN,20);
   		cin.get();
-    cout << "What is the last name of the student" << endl;
-          char lN[20];
+		cout << "Please enter the student's last name" << endl;
+  		char lN[20];
   		cin.get(lN,20);
   		cin.get();
-    cout << "What is the Student ID" << endl;
-         	int sI;
+		cout << "Please enter the students id number" << endl;
+  		int sI;
   		cin >> sI;
   		cin.get();
-    cout << "What is the students GPA" << endl;
-          float G;
+		cout << "Please enter the student's GPA" << endl;
+  		float G;
  		cin >> G;
 	  	cin.get();
-   
-    Hashy.addStudent(fN, lN, sI, G);
+		Hashy.addStudent(fN, lN, sI, G);
+    }
+    //prints linked list	
+    if(input == 2){
+	Hashy.print();
+
+    }
+    //deletes an item based on ID	
+    if(input == 3){
+    }
+    //exits function
+    if(input == 5){
+      break;
+    }
   }
-   //prints vector
-  if(choice == 1){  
-     Hashy.print();
-  }
-   //delete student
-  if(choice == 2){  
-  }
-   //quits program
-  if(choice == 3){
-    loop = 1;
-    break;
-  }
-  }
-  
+  return 0;  	
+	
 }
-  
 
 /*void rehash(int tablesize, hashmap Hashy){
 int oldtablesize = tablesize;
