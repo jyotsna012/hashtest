@@ -22,6 +22,10 @@ void hashmap::setA(){
   a = 10;
 }
 
+void hashmap::setTableSize(){
+  tableSize = 10;
+}
+
 void hashmap::addStudent(char* firstName, char* lastName, int studentId, float GPA){
   
   int index = Hash(firstName);
