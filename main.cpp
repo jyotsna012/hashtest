@@ -93,7 +93,7 @@ while(true){
       cin.get(); 
  	
       for(int z =0; z < num; z++){
-      	cout << first[z] << " " << last[z]<<endl;
+      	cout << first[z] <<endl;
       
       }
       
