@@ -158,3 +158,31 @@ int hashmap::Hash(char* key){
   return index;
   
 }
+
+void hashmap::removeItem(int sID){
+  int index = Hash(findName(sID));
+  item* delPtr;
+  item* P1;
+  item* P2;
+
+
+}
+char* hashmap::findName(int sID){
+  int index = Hash(fname);
+  bool foundID = false;
+  char fName[20];  
+  
+  item* Ptr = HashTable[index];
+  while(Ptr != NULL){
+    if(Ptr->studentId == sID){
+      foundID = true;
+      strcpy(fName, Ptr->firstName); 
+    }
+    Ptr = Ptr->next;  
+  }
+  
+  if(foundID == true){
+    return fName;
+  }
+}
+
