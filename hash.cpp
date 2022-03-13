@@ -168,10 +168,13 @@ void hashmap::removeItem(char* fName){
   cout << index << endl;
 
   if(HashTable[index]->firstName == "empty" && HashTable[index]->lastName == "empty"){
+    cout << "in one1" << endl;
     cout << "name was not found in HashTable" << endl;
   }
   
   else if(HashTable[index] -> firstName == fName && HashTable[index]->next == NULL){
+        cout << "in one2" << endl;
+
     strcpy(HashTable[index]->firstName, "empty");  
     strcpy(HashTable[index]->lastName, "empty");  
     HashTable[index]->studentId = 0;
@@ -182,6 +185,8 @@ void hashmap::removeItem(char* fName){
   }
   
   else if(HashTable[index] -> firstName == fName){
+        cout << "in one3" << endl;
+
   
     delPtr = HashTable[index];
     HashTable[index] = HashTable[index]->next;
@@ -191,6 +196,8 @@ void hashmap::removeItem(char* fName){
   }
   
   else{
+        cout << "in one4" << endl;
+
     P1 = HashTable[index]->next;
     P2 = HashTable[index];
     
@@ -199,8 +206,12 @@ void hashmap::removeItem(char* fName){
       P1 = P1->next;
     }
     if(P1 == NULL){
+          cout << "in one5" << endl;
+
        cout << "name was not found in HashTable" << endl;
     }else{
+          cout << "in one6" << endl;
+
       delPtr = P1;
       P1 = P1 -> next;
       P2 -> next = P1;
