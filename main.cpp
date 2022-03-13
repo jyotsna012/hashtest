@@ -90,7 +90,7 @@ while(true){
       cin.get(); 
  	
       for(int z =0; z < num; z++){
-	 float randGPA = RandomFloat(float 1.00, float 5.00)
+	 float randGPA = RandomFloat(1.00, 5.00)
       	 Hashy.addStudent(first[z], last[z], currentID, randGPA)
 	 currentID = currentID + 1;
       }
