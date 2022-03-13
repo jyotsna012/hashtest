@@ -8,13 +8,13 @@
 #include "hash.h"
 
 using namespace std;
-  
+float RandomFloat(float a, float b);
 int main(){
       string first[35];
       string last[35];
       int i = 0;
       int a = 0;
-	    
+      int currentID = 000001;
       fstream myFile;
 	    myFile.open("firstNames.txt", ios::in);
 	    if(myFile.is_open()){
@@ -25,8 +25,7 @@ int main(){
 			i++;
 		}
 		myFile.close();
-	    }
-	    
+	    }    
        fstream myFile2;
 	    myFile2.open("lastNames.txt", ios::in);
 	    if(myFile2.is_open()){
@@ -47,8 +46,7 @@ while(true){
     cout << "Type 1 for add, 2 for print, 3 for delete, or 4 for quit" << endl;
     cin >> input;
     cin.get();
-    
-     //asks user for details of student 
+    //asks user for details of student 
     if(input == 1){
 		cout << "Please enter the student's first name" << endl;
   		char fN[20];
@@ -71,7 +69,6 @@ while(true){
     //prints linked list	
     if(input == 2){
 	Hashy.print();
-
     }
     //deletes an item based on name	
     if(input == 3){
@@ -93,26 +90,21 @@ while(true){
       cin.get(); 
  	
       for(int z =0; z < num; z++){
-      	cout << first[z] <<endl;
-	            	cout << last[z] <<endl;
-
-      
+	 float randGPA = RandomFloat(float 1.00, float 5.00)
+      	 Hashy.addStudent(first[z], last[z], currentID, randGPA)
+	 currentID = currentID + 1;
       }
-      
-      
-	    
-      /*const int size = 220;
-      char correctAnswers[size];
-      ifstream correctAnswersFile;
-      correctAnswersFile.open("firstNames.txt");
-      for (int i = 0; i < size; i++) {
-      correctAnswersFile >> correctAnswers[i];
-      cout << correctAnswers[i] << endl;
-	}*/
     }
   }
   return 0;  	
 	
+}
+
+float RandomFloat(float a, float b) {
+    float random = ((float) rand()) / (float) RAND_MAX;
+    float diff = b - a;
+    float r = random * diff;
+    return a + r;
 }
 
 /*void rehash(int tablesize, hashmap Hashy){
