@@ -170,11 +170,11 @@ void hashmap::removeItem(char* fName){
   }
   
   else if(HashTable[index] -> firstName == fName && HashTable[index]->next == NULL){
-    strcpy(HashTable[i]->firstName, emptys);  
-    strcpy(HashTable[i]->lastName, emptys);  
-    HashTable[i]->studentId = 0;
-    HashTable[i]->GPA = 0.00;
-    HashTable[i]->next = NULL;
+    strcpy(HashTable[index]->firstName, "empty");  
+    strcpy(HashTable[index]->lastName, "empty");  
+    HashTable[index]->studentId = 0;
+    HashTable[index]->GPA = 0.00;
+    HashTable[index]->next = NULL;
     
     cout << "deleted" << endl;
   }
