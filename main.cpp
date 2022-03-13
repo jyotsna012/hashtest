@@ -69,6 +69,7 @@ while(true){
 	    if(myFile.is_open()){
 	    	string line;
 		while(getline(myFile, line)){
+			
 			cout << line << endl;
 		}
 		myFile.close();
