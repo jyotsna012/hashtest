@@ -36,7 +36,7 @@ int main(){
 			a++;
 		//	cout << line << endl;
 		}
-		myFile.close();
+		myFile2.close();
 	    }
 //will keep running until user quits
     int tablesize;
