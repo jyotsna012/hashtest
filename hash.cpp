@@ -210,7 +210,7 @@ void hashmap::removeItem(char* fName){
 }
 
 /*char* hashmap::findName(int sID){
-  int index = Hash(fname);
+  int index = Hash(fName);
   bool foundID = false;
   char fName[20];  
   
