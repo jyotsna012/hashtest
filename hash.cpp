@@ -9,29 +9,29 @@ using namespace std;
 hashmap::hashmap(int ntableSize){
   char emptys[] = "empty";
   for(int i = 0; i < tableSize; i++){
-    HashTable[i] = new Student;
-    strcpy(HashTable[i]->firstName, emptys);  
-    strcpy(HashTable[i]->lastName, emptys);  
-    HashTable[i] -> studentId = 0;
-    HashTable[i] -> GPA = 0.00;
-    HashTable[i] -> next = NULL;
+    //HashTable[i] = new Student;
+    strcpy(HashTable[i].firstName, emptys);  
+    strcpy(HashTable[i].lastName, emptys);  
+    HashTable[i].studentId = 0;
+    HashTable[i].GPA = 0.00;
+    HashTable[i].next = NULL;
   }
 }
 
 void hashmap::addStudent(char* firstName, char* lastName, int studentId, float GPA){
   
   int index = Hash(firstName);
-  if(HashTable[index] -> studentId == 0){
-    strcpy(HashTable[index]->firstName, firstName);  
-    strcpy(HashTable[index]->lastName, lastName);  
-    HashTable[index] -> studentId = studentId;
-    HashTable[index] -> GPA = GPA;
-    HashTable[index] -> next = NULL;
+  if(HashTable[index].studentId == 0){
+    strcpy(HashTable[index].firstName, firstName);  
+    strcpy(HashTable[index].lastName, lastName);  
+    HashTable[index].studentId = studentId;
+    HashTable[index].GPA = GPA;
+    HashTable[index].next = NULL;
 
   }
   else{
   
-    Student* ptr = HashTable[index];
+    //Student* ptr = HashTable[index];
     Student* n = new Student;
     strcpy(n->firstName, firstName);  
     strcpy(n->lastName, lastName);  
@@ -54,14 +54,14 @@ void hashmap::addStudent(char* firstName, char* lastName, int studentId, float G
 
 int hashmap::numItemsIndex(int index){
   int count = 0;
-  if(HashTable[index] -> studentId == 0){
+  if(HashTable[index].studentId == 0){
     return 0;
   }
   
   else{
   
     count ++;
-    Student* ptr = HashTable[index];
+    //Student* ptr = HashTable[index];
     while(ptr -> next != NULL){
         count ++;
         ptr = ptr -> next;
@@ -78,10 +78,10 @@ void hashmap::print(){
     number = numItemsIndex(i);
     cout << "-----------------" << endl;
     cout << "index = " << i << endl;
-    cout << HashTable[i]->firstName<< endl;  
-    cout << HashTable[i]->lastName<< endl;  
-    cout << HashTable[i]->studentId<< endl;
-    cout << HashTable[i]->GPA<< endl;
+    cout << HashTable[i].firstName<< endl;  
+    cout << HashTable[i].lastName<< endl;  
+    cout << HashTable[i].studentId<< endl;
+    cout << HashTable[i].GPA<< endl;
     cout << "number of items = " << number << endl;
     cout << "-----------------" << endl;  
   }
