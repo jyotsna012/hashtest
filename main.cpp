@@ -88,10 +88,14 @@ while(true){
       int num;
       cin >> num;
       cin.get(); 
+      char firstN[20];
+      char lastN[20];    
  	
       for(int z =0; z < num; z++){
+	      strcpy(firstN, first[z]);  
+	      strcpy(lastN, last[z]);  
 	 float randGPA = RandomFloat(1.00, 5.00);
-      	 Hashy.addStudent(first[z], last[z], currentID, randGPA)
+      	 Hashy.addStudent(firstN,lastN, currentID, randGPA);
 	 currentID = currentID + 1;
       }
     }
