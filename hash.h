@@ -26,8 +26,8 @@ public:
     int numItemsIndex(int index);
     void print();
     Student* HashTable[tableSize];
-    void removeItem(int sID);
-    char* findName(int sID);
+    void removeItem(char* fName);
+    //char* findName(int sID);
     //Student *HashTable = new Student[tableSize];
 
 };
