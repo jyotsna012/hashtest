@@ -76,6 +76,7 @@ void hashmap::print(){
   int number;
   for(int i = 0; i < tableSize; i++){
     number = numItemsIndex(i);
+    if(number = 1){
     cout << "-----------------" << endl;
     cout << "index = " << i << endl;
     cout << HashTable[i]->firstName<< endl;  
@@ -84,6 +85,51 @@ void hashmap::print(){
     cout << HashTable[i]->GPA<< endl;
     cout << "number of items = " << number << endl;
     cout << "-----------------" << endl;  
+    }
+    if(number = 2){
+    cout << "-----------------" << endl;
+    cout << "index = " << i << endl;
+    cout << HashTable[i]->firstName<< endl;  
+    cout << HashTable[i]->lastName<< endl;  
+    cout << HashTable[i]->studentId<< endl;
+    cout << HashTable[i]->GPA<< endl;
+    cout << "number of items = " << number << endl;
+    cout << "-----------------" << endl;  
+    cout << "-----------------" << endl;
+    cout << "index = " << i << endl;
+    cout << HashTable[i]->next->firstName << endl;  
+    cout << HashTable[i]->next->lastName << endl;  
+    cout << HashTable[i]->next->studentId << endl;
+    cout << HashTable[i]->next->GPA << endl;
+    cout << "number of items = " << number << endl;
+    cout << "-----------------" << endl;  
+    }
+    if(number = 3){
+    cout << "-----------------" << endl;
+    cout << "index = " << i << endl;
+    cout << HashTable[i]->firstName<< endl;  
+    cout << HashTable[i]->lastName<< endl;  
+    cout << HashTable[i]->studentId<< endl;
+    cout << HashTable[i]->GPA<< endl;
+    cout << "number of items = " << number << endl;
+    cout << "-----------------" << endl;  
+    cout << "-----------------" << endl;
+    cout << "index = " << i << endl;
+    cout << HashTable[i]->next->firstName << endl;  
+    cout << HashTable[i]->next->lastName << endl;  
+    cout << HashTable[i]->next->studentId << endl;
+    cout << HashTable[i]->next->GPA << endl;
+    cout << "number of items = " << number << endl;
+    cout << "-----------------" << endl;  
+    cout << "-----------------" << endl;
+    cout << "index = " << i << endl;
+    cout << HashTable[i]->next->next->firstName << endl;  
+    cout << HashTable[i]->next->next->lastName << endl;  
+    cout << HashTable[i]->next->next->studentId << endl;
+    cout << HashTable[i]->next->next->GPA << endl;
+    cout << "number of items = " << number << endl;
+    cout << "-----------------" << endl;  
+    }
   }
 
 }
