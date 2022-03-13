@@ -2,6 +2,8 @@
 #include <iostream>
 #include <cstring>
 #include <fstream>
+#include <string>
+
 
 #include "hash.h"
 
@@ -62,14 +64,24 @@ while(true){
       cin >> num;
       cin.get();   
 	    
-      const int size = 220;
+      fstream myFile;
+	    myFile.open("firstNames.txt", ios::in);
+	    if(myFile.is_open()){
+	    	string line;
+		while(getline(myFile, line)){
+			cout << line << endl;
+		}
+		myFile.close();
+	    }
+	    
+      /*const int size = 220;
       char correctAnswers[size];
       ifstream correctAnswersFile;
       correctAnswersFile.open("firstNames.txt");
       for (int i = 0; i < size; i++) {
       correctAnswersFile >> correctAnswers[i];
       cout << correctAnswers[i] << endl;
-}
+	}*/
     }
   }
   return 0;  	
