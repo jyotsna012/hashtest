@@ -108,9 +108,11 @@ while(true){
 	 float randGPA = RandomFloat(2.00, 5.00);
       	 Hashy.addStudent(p1,p2, currentID, randGPA);
 	 currentID = currentID + 1;
-      }
-      first[z] = done;
+	      
+      first[z] = done;   
       last[z] = done;
+      }
+
     }
   }
   return 0;  	
