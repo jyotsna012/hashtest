@@ -51,6 +51,7 @@ while(true){
     cin >> input;
     cin.get();
     //asks user for details of student 
+    cout << "input 2: " << input2 << endl;
     if(input == 1){
 		cout << "Please enter the student's first name" << endl;
   		char fN[20];
