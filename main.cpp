@@ -88,6 +88,7 @@ while(true){
       int num;
       cin >> num;
       cin.get(); 
+      char done[20] = "done";
     
       for(int z =0; z < num; z++){
       
@@ -104,10 +105,12 @@ while(true){
       for (v = 0; v < sizeof(p2); v++) {
         p2[v] = s2[v];
       }
-	 float randGPA = RandomFloat(1.00, 5.00);
+	 float randGPA = RandomFloat(2.00, 5.00);
       	 Hashy.addStudent(p1,p2, currentID, randGPA);
 	 currentID = currentID + 1;
       }
+      first[z] = done;
+      last[z] = done;
     }
   }
   return 0;  	
