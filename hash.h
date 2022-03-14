@@ -8,7 +8,7 @@ using namespace std;
 class hashmap{
 public:
   private:
-    static const int tableSize = 3;
+    static const int tableSize = 100;
     //int tableSize = 100;
     struct Student {
       char firstName[20];
