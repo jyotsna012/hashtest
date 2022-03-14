@@ -88,14 +88,26 @@ while(true){
       int num;
       cin >> num;
       cin.get(); 
-      char firstN[20];
-      char lastN[20];    
- 	
+    
       for(int z =0; z < num; z++){
-	      strcpy(firstN, first[z]);  
-	      strcpy(lastN, last[z]);  
+      
+      string s1(first[z]);
+      char p1[s1.length()];
+      int u;    
+      for (u = 0; u < sizeof(p1); u++) {
+        p1[u] = s1[u];
+        cout << p1[u];
+      }
+	    
+      string s2(last[z]);
+      char p2[s2.length()];
+      int v;    
+      for (v = 0; v < sizeof(p2); v++) {
+        p2[v] = s2[v];
+        cout << p2[v];
+      }
 	 float randGPA = RandomFloat(1.00, 5.00);
-      	 Hashy.addStudent(firstN,lastN, currentID, randGPA);
+      	 Hashy.addStudent(p1,p2, currentID, randGPA);
 	 currentID = currentID + 1;
       }
     }
