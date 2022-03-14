@@ -41,9 +41,8 @@ int main(){
     int tablesize;
     tablesize = 100;
     hashmap Hashy(tablesize);
-while(true){
-    int input;
-    int input2;
+	
+     int input2;
     cout << "Would you like to add any random computer generated students? Type 1 for yes and 2 for no" << endl;
     cin >> input2;
     cin.get();
@@ -78,11 +77,13 @@ while(true){
       }
 
     }
+	
+while(true){
+    int input;
     cout << "now its time to manually add students. Type 1 for add, 2 for print, 3 for delete, or 4 for quit" << endl;
     cin >> input;
     cin.get();
     //asks user for details of student 
-    cout << "input 2: " << input2 << endl;
     if(input == 1){
 		cout << "Please enter the student's first name" << endl;
   		char fN[20];
