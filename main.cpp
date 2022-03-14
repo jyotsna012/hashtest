@@ -92,6 +92,8 @@ while(true){
     
       for(int z =0; z < num; z++){
       
+      
+      
       string s1(first[z]);
       char p1[s1.length()];
       int u;    
@@ -108,9 +110,6 @@ while(true){
 	 float randGPA = RandomFloat(2.00, 5.00);
       	 Hashy.addStudent(p1,p2, currentID, randGPA);
 	 currentID = currentID + 1;
-	      
-      first[z] = done;   
-      last[z] = done;
       }
 
     }
