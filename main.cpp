@@ -14,7 +14,7 @@ int main(){
       string last[35];
       int i = 0;
       int a = 0;
-      int currentID = 000001;
+      int currentID = 111111;
       fstream myFile;
 	    myFile.open("firstNames.txt", ios::in);
 	    if(myFile.is_open()){
