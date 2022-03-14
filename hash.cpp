@@ -220,23 +220,3 @@ void hashmap::removeItem(char* fName){
     }
   }
 }
-
-/*char* hashmap::findName(int sID){
-  int index = Hash(fName);
-  bool foundID = false;
-  char fName[20];  
-  
-  Student* Ptr = HashTable[index];
-  while(Ptr != NULL){
-    if(Ptr->studentId == sID){
-      foundID = true;
-      strcpy(fName, Ptr->firstName); 
-    }
-    Ptr = Ptr->next;  
-  }
-  
-  if(foundID == true){
-    return fName;
-  }
-}*/
-
