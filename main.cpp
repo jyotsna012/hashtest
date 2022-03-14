@@ -47,6 +47,37 @@ while(true){
     cout << "Would you like to add any random computer generated students? Type 1 for yes and 2 for no" << endl;
     cin >> input2;
     cin.get();
+        if(input2 == 2){
+   
+    }
+    //random student gen
+    if(input2 == 1){
+      cout << "enter the number of computer generated students you would like to enter. " << endl;
+      int num;
+      cin >> num;
+      cin.get(); 
+    
+      for(int z =0; z < num; z++){
+      
+      string s1(first[z]);
+      char p1[s1.length()];
+      int u;    
+      for (u = 0; u < sizeof(p1); u++) {
+        p1[u] = s1[u];
+      }
+	    
+      string s2(last[z]);
+      char p2[s2.length()];
+      int v;    
+      for (v = 0; v < sizeof(p2); v++) {
+        p2[v] = s2[v];
+      }
+	 float randGPA = RandomFloat(2.00, 5.00);
+      	 Hashy.addStudent(p1,p2, currentID, randGPA);
+	 currentID = currentID + 1;
+      }
+
+    }
     cout << "now its time to manually add students. Type 1 for add, 2 for print, 3 for delete, or 4 for quit" << endl;
     cin >> input;
     cin.get();
@@ -87,37 +118,7 @@ while(true){
     if(input == 4){
       break;
     }
-    if(input2 == 2){
-   
-    }
-    //random student gen
-    if(input2 == 1){
-      cout << "enter the number of computer generated students you would like to enter. " << endl;
-      int num;
-      cin >> num;
-      cin.get(); 
-    
-      for(int z =0; z < num; z++){
-      
-      string s1(first[z]);
-      char p1[s1.length()];
-      int u;    
-      for (u = 0; u < sizeof(p1); u++) {
-        p1[u] = s1[u];
-      }
-	    
-      string s2(last[z]);
-      char p2[s2.length()];
-      int v;    
-      for (v = 0; v < sizeof(p2); v++) {
-        p2[v] = s2[v];
-      }
-	 float randGPA = RandomFloat(2.00, 5.00);
-      	 Hashy.addStudent(p1,p2, currentID, randGPA);
-	 currentID = currentID + 1;
-      }
 
-    }
   }
   return 0;  	
 	
