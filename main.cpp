@@ -96,7 +96,6 @@ while(true){
       int u;    
       for (u = 0; u < sizeof(p1); u++) {
         p1[u] = s1[u];
-        cout << p1[u];
       }
 	    
       string s2(last[z]);
@@ -104,7 +103,6 @@ while(true){
       int v;    
       for (v = 0; v < sizeof(p2); v++) {
         p2[v] = s2[v];
-        cout << p2[v];
       }
 	 float randGPA = RandomFloat(1.00, 5.00);
       	 Hashy.addStudent(p1,p2, currentID, randGPA);
