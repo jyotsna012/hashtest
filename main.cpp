@@ -46,6 +46,7 @@ while(true){
     int input2;
     cout << "Would you like to add any random computer generated students? Type 1 for yes and 2 for no" << endl;
     cin >> input2;
+    cin.get();
     cout << "now its time to manually add students. Type 1 for add, 2 for print, 3 for delete, or 4 for quit" << endl;
     cin >> input;
     cin.get();
@@ -94,7 +95,6 @@ while(true){
       int num;
       cin >> num;
       cin.get(); 
-      char done[20] = "done";
     
       for(int z =0; z < num; z++){
       
